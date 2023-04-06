@@ -2,7 +2,7 @@ import openai
 import gradio as gr
 from openai_experiments import config
 
-# openai.api_key = config.api_key
+openai.api_key = config.api_key
 
 messages = [
     {"role": "system", "content": "You are a helpful and kind AI Assistant."},
