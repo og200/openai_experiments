@@ -13,6 +13,7 @@ from llama_index import GPTSimpleVectorIndex, download_loader
 openai.api_key = config.api_key
 os.environ['OPENAI_API_KEY'] = openai.api_key
 
+
 ##### CHAPTER 1: handle Google Docs
 
 def authorize_gdocs():
@@ -31,6 +32,7 @@ def authorize_gdocs():
             cred = flow.run_local_server(port=0)
         with open("token.pickle", 'wb') as token:
             pickle.dump(cred, token)
+
 
 # function to authorize or download latest credentials
 authorize_gdocs()
@@ -58,4 +60,13 @@ index = GPTSimpleVectorIndex.load_from_disk('index.json')
 while True:
     prompt = input("Type prompt: ")
     response = index.query(prompt)
+    promptresponse=[prompt, response]
+    with open("output.txt", "a") as f:
+        f.write("\n \n")
+        f.write(prompt)
+        f.write("\n")
+        f.write(response.__str__())
+
     print(response)
+
+f.close()
