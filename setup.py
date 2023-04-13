@@ -2,6 +2,8 @@
 import os
 
 from setuptools import setup, find_packages
+
+
 def package_files(directory):
     paths = []
     for (path, directories, filenames) in os.walk(directory):
@@ -27,6 +29,6 @@ setup(
         '': [],
     },
     install_requires=[
-        'openai'
+        'openai', 'pinecone'
     ]
 )

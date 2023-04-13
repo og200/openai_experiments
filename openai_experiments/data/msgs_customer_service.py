@@ -1,8 +1,13 @@
+import openai_experiments
 import pandas as pd
 #from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 from textblob import TextBlob
+from pathlib import Path
 
-df = pd.read_csv(r"C:\Users\19496\PycharmProjects\openai_experiments\openai_experiments\data\customer_servce_data_short.csv")
+
+location = Path(openai_experiments.__file__).parent / 'data' / 'customer_service_data_short.csv'
+
+df = pd.read_csv(location)
 
 # manual best agent calc
 df['Sentiment'] = df['Text'].apply(lambda x: TextBlob(x).sentiment.polarity)

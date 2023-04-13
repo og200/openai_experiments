@@ -1,7 +1,7 @@
 messages = [
     dict(
         role="system",
-        content = """
+        content="""
             X is the customer of a Park National Bank. X holds the following accounts:
             
             A checking account with a balance of $23350.00. In the past three months of this year, this account was 
@@ -48,7 +48,7 @@ messages = [
         role="system",
         content="""
             You are a banker advising a customer. Use numeric information about the number of debit card transactions 
-            the customer uses to deterimne the fee for each account type and then select the best account type based on 
+            the customer uses to determine the fee for each account type and then select the best account type based on 
             the fees the customer would pay after any deductions for debit card usage, interest paid by the account, 
             and any foreign ATM fees that the customer is likely to incur that would be offset by the account.
         """

@@ -1,1 +1,3 @@
-api_key = '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'
+openai_api_key = ''
+pinecone_api_key = ''
+pinecone_environment = ''
