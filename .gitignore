@@ -129,3 +129,7 @@ dmypy.json
 .pyre/
 config.py
 credentials.json
+openai_experiments/sketches/index.json
+openai_experiments/sketches/output.txt
+openai_experiments/sketches/token.json
+openai_experiments/sketches/token.pickle
