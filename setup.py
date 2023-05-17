@@ -29,6 +29,6 @@ setup(
         '': [],
     },
     install_requires=[
-        'openai', 'pinecone'
+        'openai', 'pinecone-client'
     ]
 )
