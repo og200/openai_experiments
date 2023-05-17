@@ -44,8 +44,8 @@ def scrape():
         s = bs4.BeautifulSoup(html)
         title = s.find_all('h1').find
         out = ''
-        for i in s.find_all('p'):
-        print(out)
+    for i in s.find_all('p'):
+            print(out)
 
 
 if __name__ == '__main__':
